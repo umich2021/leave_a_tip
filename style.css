@@ -9,30 +9,32 @@
   --no-tip-big: #f8fafc;
   --no-tip-border: #64748b;
 } */
- :root {
-  --tip-primary: #60a5fa;        /* Lighter blue for dark backgrounds */
-  --tip-primary-dark: #93c5fd;   /* Even lighter for contrast */
-  --tip-secondary: #1e293b;      /* Dark gray instead of light blue */
-  --tip-selected: #3b82f6;       /* Brighter blue for selected state */
-  --tip-text: #e2e8f0;           /* Light gray text */
-  --tip-text-light: #f8fafc;     /* Very light text */
+:root {
+  --tip-primary: #60a5fa; /* Lighter blue for dark backgrounds */
+  --tip-primary-dark: #93c5fd; /* Even lighter for contrast */
+  --tip-secondary: #1e293b; /* Dark gray instead of light blue */
+  --tip-selected: #3b82f6; /* Brighter blue for selected state */
+  --tip-text: #e2e8f0; /* Light gray text */
+  --tip-text-light: #f8fafc; /* Very light text */
   --tip-extra-bright: #ff0000; /* Slightly more opaque red */
-  --no-tip-big: #334155;         /* Dark gray background */
-  --no-tip-border: #94a3b8;      /* Lighter gray border */
-  --bg:#313338;
+  --no-tip-big: #334155; /* Dark gray background */
+  --no-tip-border: #94a3b8; /* Lighter gray border */
+  --bg: #313338;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0px;
-    background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0px;
+  background-color: var(--bg);
+  font-family: Helvetica;
+  /* font-family: sans-serif;; */
 }
 br {
-    height: 20px;
+  height: 20px;
 }
 .broader_box {
   background: var(--bg);
@@ -40,7 +42,7 @@ br {
   border-radius: 8px;
   padding: 30px;
   max-width: 50vw;
-  width: 50vw;
+  width: 40vw;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -61,9 +63,8 @@ br {
   margin-bottom: 20px;
 }
 #high_tip {
-    outline: 2px solid var(--tip-extra-bright);
-      border: 2px solid var(--tip-primary);
-
+  outline: 2px solid var(--tip-extra-bright);
+  border: 2px solid var(--tip-primary);
 }
 
 .option {
@@ -94,7 +95,8 @@ br {
   color: var(--tip-text-light);
 }
 
-#custom {
+#custom,
+#venmo_address {
   background: var(--tip-secondary);
   border: 2px solid var(--tip-primary);
   border-radius: 6px;
@@ -110,6 +112,14 @@ br {
 #custom.selected {
   background: var(--tip-selected);
   color: var(--tip-text-light);
+}
+#venmo_address {
+  height: 1.5em;
+  margin: 0;
+  font-size: smaller;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #no_tip {
